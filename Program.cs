@@ -1,37 +1,27 @@
 ﻿internal class Program
 {
+   
     private static void Main(string[] args)
     {
-        Console.WriteLine("===Mensaje de voz===");
-        //variable
-        int opcion;
-        //cREAR EL MENU
-        Console.WriteLine("MENU PRINCIPAL");
-        Console.WriteLine("1: recepcion");
-        Console.WriteLine("2: vigilancia");
-        Console.WriteLine("3: mantenimiento");
-        Console.WriteLine("4: Salir");
-        Console.WriteLine("Digite una opcion []: ");
-        opcion=Convert.ToInt32(Console.ReadLine());
-        //Condiciones
-        if (opcion == 1)
-        {
-            //Limpiar pantalla
-            Console.Clear();
-            Console.WriteLine("Bienvenido al departamento de Recepcion");
-        }
-        if (opcion == 2)
-            Console.WriteLine("Bienvenido al departamento de vigilancia");
+        Console.WriteLine("===Promedo notas===");
+        int n1, n2, n3, n4, n5;
+        string materia;
+        Console.WriteLine("Digite la materia");
+        materia =Console.ReadLine();
+        Console.WriteLine("Digite 5 notas: ");
+        n1=Convert.ToInt32(Console.ReadLine());
+        n2=Convert.ToInt32(Console.ReadLine());
+        n3=Convert.ToInt32(Console.ReadLine());
+        n4=Convert.ToInt32(Console.ReadLine());
+        n5=Convert.ToInt32(Console.ReadLine());
 
-        if (opcion == 3)
-            Console.WriteLine("Bienvenido al departamento de mantenimiento");
+        double promedio = (n1 + n2 + n3 + n4 + n5) / 5;
+        if (promedio >= 70)
+            Console.WriteLine("Estudiante aprobado");
+        else
+            Console.WriteLine("Estudiante reprobado");
 
-        if (opcion !=1 && opcion!=2 && opcion!=3)
-            Console.WriteLine("Saliendo del sistema");
-
-
-
-
-
-    }
+        Console.WriteLine("La materia: "+materia);
+        Console.WriteLine("El promedio: "+promedio);
+    } 
 }
